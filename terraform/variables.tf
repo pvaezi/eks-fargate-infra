@@ -1,0 +1,13 @@
+variable "region" {}
+variable "environment" {}
+variable "cluster_name" {}
+variable "vpc_cidr" {}
+variable "vpc_name" {}
+variable "public_subnets_cidr" {}
+variable "availability_zones_public" {}
+variable "private_subnets_cidr" {}
+variable "availability_zones_private" {}
+variable "cidr_block-internet_gw" {}
+variable "cidr_block-nat_gw" {}
+variable "eks_node_group_instance_types" {}
+variable "fargate_namespace" {}
