@@ -1,3 +1,4 @@
+variable "aws_profile" {}
 variable "region" {}
 variable "environment" {}
 variable "cluster_name" {}
@@ -10,4 +11,6 @@ variable "availability_zones_private" {}
 variable "cidr_block-internet_gw" {}
 variable "cidr_block-nat_gw" {}
 variable "eks_node_group_instance_types" {}
+variable "cluster_min_nodes" {}
+variable "cluster_max_nodes" {}
 variable "fargate_namespace" {}
