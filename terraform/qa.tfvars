@@ -1,0 +1,16 @@
+aws_profile                     =  "eks"
+region                          =  "us-east-2"
+environment                     =  "qa"
+cluster_name                    =  "main"
+vpc_cidr                        =  "192.168.0.0/16"
+vpc_name                        =  "main"
+public_subnets_cidr             =  ["192.168.0.0/24"]
+private_subnets_cidr            =  ["192.168.1.0/24"]
+availability_zones_public       =  ["us-east-2a"]
+availability_zones_private      =  ["us-east-2b"]
+cidr_block-internet_gw          =  "0.0.0.0/0"
+cidr_block-nat_gw               =  "0.0.0.0/0"
+eks_node_group_instance_types   =  "t2.micro"
+cluster_max_nodes               =  2
+cluster_min_nodes               =  1
+fargate_namespace               =  "fargate-node"
