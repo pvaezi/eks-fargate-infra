@@ -71,7 +71,7 @@ resource "aws_nat_gateway" "nat" {
   depends_on        = [aws_internet_gateway.gw]
 
   tags = {
-    "Name"          = "eks-nat_Gateway-${count.index + 1}-${var.environment}"
+    "Name"          = "eks-nat-gateway-${count.index + 1}-${var.environment}"
   }
 }
 
@@ -85,7 +85,7 @@ resource "aws_route_table" "internet-route" {
   depends_on        = [ aws_vpc.main ]
 
   tags  = {
-    "Name"          = "eks-public_route_table-${var.environment}"
+    "Name"          = "eks-public-route-table-${var.environment}"
     "state"         = "public"
   }
 }
@@ -101,7 +101,7 @@ resource "aws_route_table" "nat-route" {
   depends_on        = [ aws_vpc.main ]
 
   tags  = {
-    "Name"          = "eks-nat_route_table-${count.index + 1}-${var.environment}"
+    "Name"          = "eks-nat-route-table-${count.index + 1}-${var.environment}"
     "state"         = "public"
   }
 }
